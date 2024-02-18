@@ -24,7 +24,7 @@ function! neuims#keyboard#Enable(im_name) abort
   let g:neuims.im = a:im_name
 
   echohl WarningMsg
-  echomsg '[neuims] Switched to '.a:im_name.'.'
+  echo '[neuims] Switched to '.a:im_name.'.'
   echohl clear
 endfunction
 
