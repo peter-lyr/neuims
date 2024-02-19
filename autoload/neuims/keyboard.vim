@@ -31,7 +31,10 @@ endfunction
 let s:win_ims = expand('<sfile>:h:h:h').'/bin/win_ims.exe'
 
 function! s:WinEnable(im_id) abort
-  call system(s:win_ims.' '.a:im_id)
+  try
+    call system(s:win_ims.' '.a:im_id)
+  catch
+  endtry
 endfunction
 
 function! s:UnixEnable(im_id) abort
